@@ -49,14 +49,21 @@ function TradeDetails() {
                                         Risk reward:
                                     </label>
                                     <div class="col-8">
-                                        <label class="form-label" for="risk">
-                                            Risk
-                                        </label>
-                                        <input class="form-control" type="number" name="risk" id="risk"></input>
-                                        <label class="form-label" for="rrewardisk">
-                                            Reward
-                                        </label>
-                                        <input class="form-control" type="number" name="reward"></input>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label class="form-label" for="risk">
+                                                    Risk
+                                                </label>
+                                                <input class="form-control" type="number" name="risk" id="risk"></input>
+
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label" for="rrewardisk">
+                                                    Reward
+                                                </label>
+                                                <input class="form-control" type="number" name="reward"></input>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <br />
@@ -66,7 +73,7 @@ function TradeDetails() {
                                     </label>
                                     <div class="col-8">
                                         <select name="strategy" class="form-select">
-                                            <option selected>Select one</option>
+                                            <option>Select one</option>
                                             <option>MA/B</option>
                                             <option>Central Pivot</option>
                                             <option>BTST</option>
@@ -81,26 +88,32 @@ function TradeDetails() {
                                         Instrument type:
                                     </label>
                                     <div class="col-8">
-                                        <div class="form-check">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <label class="form-label-check" >
+                                                        <input type="radio" name="instrumentType" value='eqity'></input> Equity
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-label-check">
+                                                        <input type="radio" name="instrumentType" value='crude'></input> Crude
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <label class="form-label-check">
+                                                        <input type="radio" name="instrumentType" value='feature'></input> Feature
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-label-check">
+                                                        <input type="radio" name="instrumentType" value='option'></input> Option
+                                                    </label>
+                                                </div>
 
-                                            <label class="form-label-check" >
-                                                <input type="radio" name="instrumentType" value='eqity'></input> equity
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <label class="form-label-check">
-                                                <input type="radio" name="instrumentType" value='feature'></input> feature
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <label class="form-label-check">
-                                                <input type="radio" name="instrumentType" value='option'></input> option
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <label class="form-label-check">
-                                                <input type="radio" name="instrumentType" value='crude'></input> crude
-                                            </label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -111,8 +124,14 @@ function TradeDetails() {
                                         Trade quantity:
                                     </label>
                                     <div class="col-8">
-                                        Quantity<input class="form-control" name="quantity"></input>
-                                        Amount<input class="form-control" name="amount"></input>
+                                        <div class="row">
+                                            <div class="col">
+                                                Quantity<input class="form-control" name="quantity"></input>
+                                            </div>
+                                            <div class="col">
+                                                Amount<input class="form-control" name="amount"></input>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -132,10 +151,15 @@ function TradeDetails() {
                                         Trade date:
                                     </label>
                                     <div class="col-8">
-                                        Entry <input class="form-control" type="date" name="entryTime"></input>
-                                        Exit <input class="form-control" type="date" name="exitTime"></input>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                Entry <input class="form-control" type="date" name="entryTime"></input>
+                                            </div>
+                                            <div class="col-6">
+                                                Exit <input class="form-control" type="date" name="exitTime"></input>
+                                            </div>
+                                        </div>
                                     </div>
-
                                 </div>
 
                                 <br />
@@ -144,17 +168,23 @@ function TradeDetails() {
                                         Trade result:
                                     </label>
                                     <div class="col-8">
-                                        <div class="form-check">
-                                            <input name='tradeResult' type="radio" value="target"></input>
-                                            <label class="form-label">Target</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input name='tradeResult' type="radio" value="stop"></input>
-                                            <label class="form-label">Stop Loss</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input name='tradeResult' type="radio" value="terminate"></input>
-                                            <label class="form-label">Terminate</label>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input name='tradeResult' type="radio" value="target"></input>
+                                                    <label class="form-label">Target</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input name='tradeResult' type="radio" value="stop"></input>
+                                                    <label class="form-label">Stop Loss</label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check">
+                                                    <input name='tradeResult' type="radio" value="terminate"></input>
+                                                    <label class="form-label">Terminate</label>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -183,7 +213,7 @@ function TradeDetails() {
                         </div>
 
                         <br />
-                        
+
                         <button type="button" class="btn btn-primary">Submit</button>
                         <button type="button" class="btn btn-secondary ms-3">Clear</button>
                     </form>
